@@ -1,12 +1,13 @@
 class Openfortivpn < Formula
   desc "Open Fortinet client for PPP+SSL VPN tunnel services"
   homepage "https://github.com/adrienverge/openfortivpn"
-  url "https://github.com/adrienverge/openfortivpn/archive/v1.4.0.tar.gz"
-  sha256 "3b5ddbf4c0aecc85e9630bb45e012f7e0b0db5a10276f03f8af55326db97d9b4"
+  url "https://github.com/adrienverge/openfortivpn/archive/v1.14.0.tar.gz"
+  sha256 "3144056a93991ff77d52467a18ff72ab6c3349ebcea8642ceb3136c1091e3b98"
 
-  depends_on "automake" => :build
   depends_on "autoconf" => :build
-  depends_on "openssl"
+  depends_on "automake" => :build
+  depends_on "pkg-config" => :build
+  depends_on "openssl@1.1"
 
   def install
     system "./autogen.sh"
